@@ -106,7 +106,7 @@ class BookDatabaseApp:
         self.tree.heading("ngayxuatban", text="Publish Date")
         self.tree.grid(pady=10, columnspan=6)
 
-            # Load data after connection
+        # Load data after connection
         self.load_data()
     
     

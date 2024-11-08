@@ -1,0 +1,100 @@
+/* Trang index */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+}
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.book-table th, .book-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.book-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.action-button-edit {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.action-button-edit:hover {
+    background-color: #218838;
+}
+
+.action-button-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.action-button-delete:hover {
+    background-color: #c82333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px 0;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}

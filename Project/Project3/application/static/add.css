@@ -75,25 +75,25 @@ body {
 
 
 .logout {
-    text-align: right; /* Căn phải để nút nằm phía bên phải */
-    margin: 10px; /* Thêm khoảng cách bên ngoài */
+    text-align: right;
+    margin: 10px; 
 }
 
 .logout .btn {
     display: inline-block;
-    padding: 10px 20px; /* Kích thước padding cho nút */
-    background-color: #e74c3c; /* Màu nền đỏ */
-    color: white; /* Màu chữ */
-    text-decoration: none; /* Bỏ gạch chân */
-    border-radius: 5px; /* Bo tròn các góc */
-    font-weight: bold; /* Chữ đậm */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+    padding: 10px 20px; 
+    background-color: #e74c3c; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 0.3s; 
 }
 
 .logout .btn:hover {
-    background-color: #c0392b; /* Màu nền khi di chuột */
+    background-color: #c0392b;
 }
 
 .logout .btn:active {
-    background-color: #a93226; /* Màu nền khi nhấn */
+    background-color: #a93226;
 }

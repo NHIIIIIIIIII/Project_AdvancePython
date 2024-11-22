@@ -14,22 +14,10 @@ port = '5432'
 table_name = 'books'
 users_table = 'users'
 
-# Route Trang Chủ (Hiển thị sách)
-'''@app.route('/')
-def index():
-    conn = get_db_connection(db_name, user, password, host, port)
-    if conn:
-        books = get_data(conn, table_name)
-        conn.close()
-        return render_template('index.html', books=books)
-    else:
-        flash("Không thể kết nối đến cơ sở dữ liệu.")
-        return render_template('index.html', books=[])'''
 # Route Đăng Nhập
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    # try excpet của Nhi sẽ hk run đc đâu , đa số trường hợp thì try excpect sẽ chả ảnh hưởng hay có tác dụng j đó Bi bt hk =.=
-    # vaanggg ngoan
+    
     form = LoginForm()
     if form.validate_on_submit():
         try: 
@@ -39,18 +27,12 @@ def login():
             session['host'] = form.host.data
             session['port'] = form.port.data
             conn = get_db_connection(form.db_name.data, form.user.data, form.password.data, form.host.data, form.port.data)
-            # conn là mình hiểu Bi dùng để kb dn , hàm get_db+connection là hàm Bi đã làm từ tr đk nè
-            # Bi xem hàm đó trả về gì
-            # Bi thấy nó trả về 2 giá trị là conn(giá trị connection) hoặc None ( hiểu là rỗng )
-            # Vậy nên nếu nó conn được thì chắc chắn ko None phải hog, mình viết điều kiện ktra xem conn nó ok ko , nếu ko ok buộc phải login lại
-            # Nếu biến conn của Bi ko None (nghĩa là connect được) thì mình cho nó vào, ngược lại ( biến None) thì ko cho
-            # Bi ổn đoạn này hk 
-            # R đó chỉ đơn giản v thôi -.- , tại của Bi sai đúng j cx conn , Bi khi nào cái này phải xem ở ternimal nó hiện cái j để mà bt check nha
+           
             if conn is not None:
                 flash('Connected to database successfully.')
                 return redirect(url_for('index'))
             else:
-                # Đó Bi thấy lỗi chưa, lỗi thì nó ko cho qua index
+                
                 flash(f'Error connecting to database: {e}')
         except Exception as e:
             flash(f'Error connecting to database: {e}')
@@ -81,7 +63,7 @@ def add_book():
         tensach = request.form['tensach']
         mota = request.form['mota']
         ngayxuatban = request.form['ngayxuatban']
-        # Lý do bạn gặp lỗi có thể là ở đây. Kiểm tra lại khi gửi form.
+        
         conn = get_db_connection(db_name, user, password, host, port)
         if conn:
             insert_data(conn, table_name, (masach, tensach, mota, ngayxuatban))

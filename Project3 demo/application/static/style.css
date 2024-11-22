@@ -91,26 +91,53 @@ body {
     display: inline;
 }
 
-.logout {
-    text-align: right; /* Căn phải để nút nằm phía bên phải */
-    margin: 10px; /* Thêm khoảng cách bên ngoài */
+
+/* Container chung cho các nút */
+.text-start, .text-end {
+    margin-bottom: 15px;
 }
 
-.logout .btn {
+/* Nút Trang Chủ */
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
     display: inline-block;
-    padding: 10px 20px; /* Kích thước padding cho nút */
-    background-color: #e74c3c; /* Màu nền đỏ */
-    color: white; /* Màu chữ */
-    text-decoration: none; /* Bỏ gạch chân */
-    border-radius: 5px; /* Bo tròn các góc */
-    font-weight: bold; /* Chữ đậm */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+    width: auto;
+    transition: background-color 0.3s ease;
 }
 
-.logout .btn:hover {
-    background-color: #c0392b; /* Màu nền khi di chuột */
+.btn-info:hover {
+    background-color: #138496; /* Màu khi hover */
+    cursor: pointer;
 }
 
-.logout .btn:active {
-    background-color: #a93226; /* Màu nền khi nhấn */
+/* Nút Đăng Xuất */
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Màu khi hover */
+    cursor: pointer;
+}
+
+/* Thêm khoảng cách giữa các nút */
+.text-end {
+    margin-top: 10px;
 }

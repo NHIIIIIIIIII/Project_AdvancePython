@@ -72,28 +72,3 @@ body {
 .exit-button:hover {
     background-color: #c82333;
 }
-
-
-.logout {
-    text-align: right; /* Căn phải để nút nằm phía bên phải */
-    margin: 10px; /* Thêm khoảng cách bên ngoài */
-}
-
-.logout .btn {
-    display: inline-block;
-    padding: 10px 20px; /* Kích thước padding cho nút */
-    background-color: #e74c3c; /* Màu nền đỏ */
-    color: white; /* Màu chữ */
-    text-decoration: none; /* Bỏ gạch chân */
-    border-radius: 5px; /* Bo tròn các góc */
-    font-weight: bold; /* Chữ đậm */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
-}
-
-.logout .btn:hover {
-    background-color: #c0392b; /* Màu nền khi di chuột */
-}
-
-.logout .btn:active {
-    background-color: #a93226; /* Màu nền khi nhấn */
-}

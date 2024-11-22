@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2 import sql
 
-def get_db_connection(db_name, user, password, host, port):
+def connect_db(db_name, user, password, host, port):
     try:
         conn = psycopg2.connect(
             dbname=db_name,
